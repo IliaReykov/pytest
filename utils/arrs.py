@@ -30,10 +30,10 @@ def my_slice(coll, start=None, end=None):
     if length == 0:
         return []
 
-    if start is None:
-        normalized_start = 0
-    else:
+    if start is not None:
         normalized_start = start
+    else:
+        normalized_start = 0
 
     if end is None or end > length:
         normalized_end = length
